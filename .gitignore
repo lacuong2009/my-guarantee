@@ -14,4 +14,4 @@ dist/
 # Ignore OS specific files
 .DS_Store
 Thumbs.db
-/*/users-service/target/
+/apps/*/target/
