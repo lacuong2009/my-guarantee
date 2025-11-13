@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  # --- users-service ---
+  users-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODULE: apps/users-service
+    container_name: users-service
+    environment:
+      SPRING_ARGS: "--server.port=8080"
+    ports:
+      - "8080:8080"
+  adminer:
+    image: adminer
+    container_name: pg-adminer
+    ports:
+      - "80:8080"
+  db:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data

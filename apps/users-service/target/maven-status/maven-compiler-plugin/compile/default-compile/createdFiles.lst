@@ -1,0 +1,7 @@
+users\controller\UserController.class
+users\service\UserService.class
+users\repository\UserRepository.class
+users\UsersServiceApplication.class
+users\domain\entity\User.class
+Role.class
+users\domain\model\UserModel.class

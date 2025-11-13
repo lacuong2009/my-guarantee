@@ -1,0 +1,16 @@
+  # Ignore all .log files
+*.log
+
+# Ignore the entire directory
+postgres-data/
+
+# Ignore a specific file at the root
+/secrets.txt
+
+# Ignore build output directories
+build/
+dist/
+
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
